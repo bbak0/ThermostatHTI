@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="temperature_text_size">24sp</dimen>
+    <dimen name="temperature_number">56sp</dimen>
+    <dimen name="temperature_number_small">24sp</dimen>
+    <dimen name="standard_margin">4sp</dimen>
+    <dimen name="standard_text_size">16sp</dimen>
+</resources>

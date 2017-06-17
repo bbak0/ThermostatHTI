@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.thermostat.thermostat.MainActivity">
+
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view2"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_margin="8dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/current_temp_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temperature"
+                android:textSize="@dimen/temperature_text_size"
+                android:layout_margin="@dimen/standard_margin"/>
+
+            <TextView
+                android:id="@+id/current_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/standard_margin"
+                android:text="@string/temp_temperature"
+                android:textSize="@dimen/temperature_number_small" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="@dimen/cardview_default_elevation">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/target"
+                android:textSize="@dimen/temperature_text_size"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout">
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/target_temp_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/target_temperature_display"
+                android:layout_centerHorizontal="true"
+                android:max="250"
+                android:progress="20"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/bPlus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/target_temperature_display"
+
+                android:layout_alignBottom="@+id/target_temperature_display"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@+id/target_temperature_display"
+                android:layout_toRightOf="@+id/target_temperature_display"
+                android:background="@drawable/button_bg_round"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/target_temperature_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:paddingTop = "6dp"
+                android:text="@string/temp_temperature"
+                android:textSize="@dimen/temperature_number"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/bMinus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:layout_alignBaseline="@+id/target_temperature_display"
+                android:layout_alignBottom="@+id/target_temperature_display"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/target_temperature_display"
+                android:layout_toStartOf="@+id/target_temperature_display"
+                android:background="@drawable/button_bg_round"
+                android:text="-" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view3"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_margin="8dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView5"
+                android:layout_alignStart="@+id/textView5"
+                android:layout_below="@+id/textView4"
+                android:text="@string/day"
+                android:textSize="@dimen/standard_text_size" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView4"
+                android:layout_alignBottom="@+id/textView4"
+                android:layout_toEndOf="@+id/night_text"
+                android:layout_toRightOf="@+id/night_text"
+                android:text="@string/day"
+                android:textSize="@dimen/standard_text_size" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/day_night_header"
+                android:layout_margin="@dimen/standard_margin"
+                android:text="@string/day"
+                android:textSize="@dimen/standard_text_size" />
+
+            <TextView
+                android:id="@+id/day_night_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/standard_margin"
+                android:text="@string/day_night_header"
+                android:textSize="@dimen/temperature_text_size" />
+
+            <TextView
+                android:id="@+id/night_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView3"
+                android:layout_alignBottom="@+id/textView3"
+                android:layout_alignLeft="@+id/textView4"
+                android:layout_alignStart="@+id/textView4"
+                android:text="@string/night"
+                android:textSize="@dimen/standard_text_size" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Thermostat</string>
+    <string name="temperature">Current Temperature:</string>
+    <string name="target">Target Temperature:</string>
+    <string name="temp_temperature">60.0°C</string>
+    <string name="day_night_header">Automatic Temperatures:</string>
+    <string name="day">Day:</string>
+    <string name="night">Night: </string>
+</resources>
